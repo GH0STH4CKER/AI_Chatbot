@@ -35,8 +35,8 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('words1.pk','wb'))
-pickle.dump(classes, open('classes.pkl','wb'))
+pickle.dump(words, open('words.pk','wb'))
+pickle.dump(classes, open('classes.pk','wb'))
 
 training_bag = []
 training_output_row = []
@@ -73,5 +73,5 @@ model.compile(loss='categorical_crossentropy',optimizer=sgd,metrics=['accuracy']
 #model.fit(np.array(train_x),np.array(train_y),epochs=200,batch_size=5,verbose=1)
 #model.save(r'C:\Users\Asus\Documents\Python_Projects\AI_chatbot\chatbot_model.model')
 hist = model.fit(np.array(train_x),np.array(train_y),epochs=200,batch_size=5,verbose=1)
-model.save(r'chatbotmodel2.h5',hist)
+model.save(r'chatbotmodel.h5',hist)
 print('Done')
