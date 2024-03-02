@@ -18,9 +18,9 @@ lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents2.json').read())
 
-words = pickle.load(open(r'C:\Users\Asus\Documents\Python_Projects\AI_chatbot\words1.pkl', 'rb'))
-classes = pickle.load(open(r'C:\Users\Asus\Documents\Python_Projects\AI_chatbot\classes1.pkl', 'rb'))
-model = load_model(r'C:\Users\Asus\Documents\Python_Projects\AI_chatbot\chatbotmodel2.h5')
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
+model = load_model('chatbotmodel.h5')
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
